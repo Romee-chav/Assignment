@@ -4,11 +4,11 @@ dotenv.config();
 
 const connectDB = async () => {
   const connection = await mysql.createConnection({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    port: process.env.DB_PORT,
-    database: process.env.DB_NAME,
+    host: process.env.MYSQLHOST,
+    user: process.env.MYSQLUSER,
+    password: process.env.MYSQLPASSWORD,
+    port: process.env.MYSQLPORT,
+    database: process.env.MYSQLDATABASE,
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0,
